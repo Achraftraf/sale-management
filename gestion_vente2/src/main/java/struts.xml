@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC 
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+	<constant name="struts.enable.DynamicMethodInvocation" value="false"/>
+	<constant name="struts.devMode" value="false"/>
+	<constant name="struts.custom.i18n.resources" value="ApplicationResources"/>
+	
+	<package name="default" extends="json-default" namespace="/">
+		<action name="login" method="login" class="action.UserActions">
+		<result name="LOGGEDIN" >index.jsp</result>
+		<result name="FIELDLOG" >Login.jsp</result>
+		</action>
+		
+		<action name="register" method="register" class="action.UserActions">
+		<result name="LOGGEDIN" >index.jsp</result>
+		<result name="FIELDLOG" >register.jsp</result>
+		</action>
+		
+		<action name="loadAll" method="findAll" class="action.ArticleActions">
+		<result name="SUCCESS" type="json"></result>
+		</action>
+		
+		<action name="allusers" method="UserList" class="action.UserActions">
+		<result name="SUCCESS" type="json"></result>
+		</action>
+		
+		<action name="addUser" method="addUsers" class="action.UserActions">
+		<result name="SUCCES" >index.jsp</result>
+		</action>
+		
+		<action name="addArticle" method="addArticle" class="action.ArticleActions">
+		<result name="SUCCES" >articles.jsp</result>
+		</action>
+		
+		<action name="addCommande" method="addCommande" class="action.CommandeActions">
+		<result name="SUCCES" >order.jsp</result>
+		</action>	
+		
+		<action name="loadAllcommande" method="findAllcommend" class="action.CommandeActions">
+		<result name="SUCCESS" type="json"></result>
+		</action>
+		
+		<action name="savePassword" method="savePassword" class="action.UserActions">
+		<result name="SUCCES" >index.jsp</result>
+		</action>
+		
+		
+		<action name="deleteObject" method="deleteObject" class="action.UserActions">
+		<result name="SUCCES" >index.jsp</result>
+		</action>
+		
+		<action name="gereFact" method="gereFact" class="action.CommandeActions">
+		<result name="SUCCES" type="json"></result>
+		</action>
+		
+		
+		<action name="supComd" method="delete" class="action.CommandeActions">
+		<result name="SUCCES" >order.jsp</result>
+		</action>
+	
+		
+			<action name="UpdCommande" method="update" class="action.CommandeActions">
+		<result name="SUCCES" >order.jsp</result>
+		</action>
+		
+	</package>
+	
+</struts>
