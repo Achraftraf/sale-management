@@ -1,8 +1,8 @@
 /********** Template CSS **********/
 :root {
-    --primary: #8f307a;
+    --primary: #6D273F;
     --secondary: #191C24;
-    --light: #6C7293;
+    --light: #ffffff;
     --dark: #000000;
 }
 
@@ -76,12 +76,43 @@
     z-index: 999;
 }
 
-.content {
+/*.content {
     margin-left: 250px;
     min-height: 100vh;
     background: var(--dark);
     transition: 0.5s;
 }
+*/
+
+/*
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 250px;
+    height: 100vh;
+    overflow-y: auto;
+    background-image: url(a.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 0.5s;
+    z-index: 999;
+}
+*/
+
+.content {
+    margin-left: 250px;
+    min-height: 100vh;
+    background-image: url(a.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 0.5s;
+}
+
+
 
 @media (min-width: 992px) {
     .sidebar {
@@ -121,17 +152,23 @@
 /*** Navbar ***/
 .sidebar .navbar .navbar-nav .nav-link {
     padding: 7px 20px;
-    color: var(--light);
+    color: var(--primary);
     font-weight: 500;
     border-left: 3px solid var(--secondary);
-    border-radius: 0 30px 30px 0;
+    border-radius: 30px 30px 30px 0;
     outline: none;
 }
 
 .sidebar .navbar .navbar-nav .nav-link:hover,
 .sidebar .navbar .navbar-nav .nav-link.active {
-    color: var(--primary);
-    background: var(--dark);
+    color: var(--light);
+/*    background: var(--primary);*/
+background-image: url(a.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 0.5s;
+    z-index: 999;
     border-color: var(--primary);
 }
 
