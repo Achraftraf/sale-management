@@ -163,7 +163,7 @@
                 <div class="bg-secondary text-center rounded p-4">
                     <div class="d-flex align-items-center justify-content-between mb-4">
                         <h6 class="mb-0">Orders List</h6>
-                        <Button class="btn btn-info" data-bs-toggle="modal"
+                      <Button class="glow-on-hover" data-bs-toggle="modal"
                                 data-bs-target="#modalCenter">add order</a>
                     
                     </div>
